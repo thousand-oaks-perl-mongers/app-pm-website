@@ -34,12 +34,12 @@ $vars->{IMAGE_DIR} = 'img';
 
 chomp ($vars->{meta_description} = <<'EOT');
 A networking and social group for discussion on Perl, located in
-Thousand Oaks, California
+SOME_PLACE
 EOT
 $vars->{meta_author} = 'Tommy Stanton';
 chomp ($vars->{header} = <<'EOT');
-ThousandOaks.pm:
-Thousand Oaks Perl Mongers
+SomePlace.pm:
+SOME_PLACE Perl Mongers
 EOT
 $vars->{title} = $vars->{header};
 $vars->{title} =~ s/\n/ /g;
@@ -48,66 +48,43 @@ $vars->{description} = $vars->{meta_description};
 
 $vars->{next_meeting} = {
     details => undef,
-    mailing_list_entry => q{2011-July/000614.html},
+    mailing_list_entry => undef,
     date    => {
-        day  => q{Wednesday, July 13, 2011},
-        time => q{7:00 PM},
+        day  => undef,
+        time => undef,
     },
     location => {
-        name    => q{ValueClick Media},
+        name    => undef,
         address => undef,
     },
     parking => undef,
     map_link => undef,
 };
 chomp ($vars->{next_meeting}->{details} = <<'EOT');
-We meet on the 2nd Wednesday of every month.  Here are the details for
-the next confirmed meeting.
 EOT
 chomp ($vars->{next_meeting}->{location}->{address} = <<'EOT');
-30699 Russel Ranch Rd
-Westlake Village, CA 91362
 EOT
-chomp ($vars->{next_meeting}->{parking}->[0]->{note} = <<'EOT');
-There is a giant parking lot right in front of the building with plenty
-of free parking. :)
-EOT
-
 $vars->{next_meeting}->{map_link} =
-    q|http://maps.google.com/maps?f=q&source=s_q&hl=en&geocode=&q=30699+Russel+Ranch+Rd.+Westlake+Village,+CA&aq=&sll=37.0625,-95.677068&sspn=44.793449,79.013672&ie=UTF8&hq=&hnear=30699+Russell+Ranch+Rd,+Westlake+Village,+Los+Angeles,+California+91362&ll=34.152248,-118.797859&spn=0.005744,0.009645&t=h&z=17|;
+    undef;
 
 $vars->{presentations} = [
-    {   presenter   => q{Arkadiy Sudarikov},
-        title       => q{Perl debugger},
-        description => undef,
+    {   presenter => undef,
+        title     => undef,
     },
-    {   presenter   => q{Peter Bowen},
-        title       => q{Test-Driven Development},
-        description => undef,
+    {   presenter => undef,
+        title     => undef,
     },
 ];
-chomp ($vars->{presentations}->[0]->{description} = <<'EOT');
-EOT
-chomp ($vars->{presentations}->[1]->{description} = <<'EOT');
-EOT
 
 $vars->{mailing_list} = {
-    post_email => q{thousand-oaks-pm@pm.org},
-    subscribe_email => q{thousand-oaks-pm-request@pm.org},
-    subscribe_url => q{http://mail.pm.org/mailman/listinfo/thousand-oaks-pm},
-    archives_url => q{http://mail.pm.org/pipermail/thousand-oaks-pm/},
+    post_email => undef,
+    subscribe_email => undef,
+    subscribe_url => undef,
+    archives_url => undef,
 };
 
 
 chomp ($vars->{content} = <<'EOT');
-Directions to get to ValueClick:<br /><br />Take the 101 Freeway to the
-Lindero Canyon Road exit and head north.  Pass the Memorial Park on your
-right and turn right at the 2nd light for Russell Ranch Road (you will
-see a Chiptole at that corner).  Pass the Costco to your right, and then
-take the first right into the parking lot (there is a little yellow
-parcel box that you can use in spotting the driveway that you need to
-turn into).  Turn left toward the glass doors in the far corner.
-Someone will be waiting to let you in downstairs, at the glass doors.
 EOT
 
 $tt->process( 'page.tt', $vars, 'index.html' ) || die $tt->error;

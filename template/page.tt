@@ -148,7 +148,7 @@
                 [%- # FIXME *.pm.org should be retrieved dynamically
                     # from somewhere else
                 -%]
-                Source is available for download <a href="source/thousand-oaks.pm.org-[% date.format(date.now, '%Y%m%d') %].tar.gz">here</a>.
+                Source is available for download <a href="source/someplace.pm.org-[% date.format(date.now, '%Y%m%d') %].tar.gz">here</a>.
                 </p>
             </div>
         </div>

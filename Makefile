@@ -5,7 +5,7 @@
 BUILD=build
 SOURCE_DIR=include/source
 # FIXME *.pm.org should be retrieved dynamically from somewhere else
-SOURCE_TAR_DIR_NAME=thousand-oaks.pm.org-`date +%Y%m%d`
+SOURCE_TAR_DIR_NAME=someplace.pm.org-`date +%Y%m%d`
 
 default: crank
 
