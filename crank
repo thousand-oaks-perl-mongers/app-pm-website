@@ -1,0 +1,90 @@
+#!/usr/bin/env perl
+
+# This script is based off of Perl101's crank script.
+# See http://github.com/petdance/perl101
+# http://www.perl101.org
+
+use strict;
+use warnings;
+
+use Getopt::Long;
+use Template ();
+
+my $buildpath = 'build';
+
+GetOptions(
+    'buildpath:s' => \$buildpath,
+) or exit;
+
+if ( ! -d $buildpath || ! -w $buildpath ) {
+    die "Buildpath ($buildpath) doesn't exist or is not writable";
+}
+
+my %defaults = (
+    INCLUDE_PATH => [ qw( template ) ],
+    OUTPUT_PATH  => $buildpath,
+    PRE_CHOMP    => 1,
+    POST_CHOMP   => 0,
+);
+
+my $tt = Template->new( \%defaults );
+my $vars = {};
+
+$vars->{IMAGE_DIR} = 'img';
+
+chomp ($vars->{meta_description} = <<'EOT');
+A networking and social group for discussion on Perl, located in
+SOME_PLACE
+EOT
+$vars->{meta_author} = 'Tommy Stanton';
+chomp ($vars->{header} = <<'EOT');
+SomePlace.pm:
+SOME_PLACE Perl Mongers
+EOT
+$vars->{title} = $vars->{header};
+$vars->{title} =~ s/\n/ /g;
+
+$vars->{description} = $vars->{meta_description};
+
+$vars->{next_meeting} = {
+    details => undef,
+    mailing_list_entry => undef,
+    date    => {
+        day  => undef,
+        time => undef,
+    },
+    location => {
+        name    => undef,
+        address => undef,
+    },
+    parking => undef,
+    map_link => undef,
+};
+chomp ($vars->{next_meeting}->{details} = <<'EOT');
+EOT
+chomp ($vars->{next_meeting}->{location}->{address} = <<'EOT');
+EOT
+$vars->{next_meeting}->{map_link} =
+    undef;
+
+$vars->{presentations} = [
+    {   presenter => undef,
+        title     => undef,
+    },
+    {   presenter => undef,
+        title     => undef,
+    },
+];
+
+$vars->{mailing_list} = {
+    post_email => undef,
+    subscribe_email => undef,
+    subscribe_url => undef,
+    archives_url => undef,
+};
+
+
+chomp ($vars->{content} = <<'EOT');
+EOT
+
+$tt->process( 'page.tt', $vars, 'index.html' ) || die $tt->error;

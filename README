@@ -1,0 +1,6 @@
+Create the web site via:
+    $ make
+
+The generated files are put in build/.
+
+See the Makefile for more details.

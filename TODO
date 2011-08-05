@@ -1,0 +1,7 @@
+[ ] Use a SQLite database with data about previous events and presentations
+    - The database file doesn't need to be uploaded to the server, it
+      can just be used locally while building the HTML
+[X] Include the source of the website for download
+    - Part of crank's job would have to be cranking out itself, the
+      Makefile, include/, etc)
+    - Maybe make symlinks of crank, Makefile in include/source/

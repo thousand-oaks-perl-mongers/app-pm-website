@@ -1,0 +1,75 @@
+body {
+    color: #000;
+    background-color: #FFF;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1em;
+}
+
+a img {
+    border: 0;
+}
+
+div#wrapper div.main {
+    margin: 0 auto;
+    padding: 4px;
+    width: 700px;
+}
+
+div#next_meeting {
+    overflow:auto;
+}
+
+div#next_meeting_info {
+    width: 275px;
+    float: left;
+}
+
+div#next_meeting_details {
+    margin-left: 290px;
+}
+
+div#next_meeting h2, div#next_meeting h3 {
+    display: inline;
+    color: #87CEFA;
+    /*color: #B0C4DE;*/
+}
+
+div#header {
+    padding: 0;
+    width: 700px;
+}
+
+div#header h1 {
+    text-align: center;
+}
+
+div#header p {
+    text-align: center;
+}
+
+div#next_meeting, div#subscribe_info {
+    color: #FFF;
+}
+
+div#next_meeting a, div#subscribe_info a {
+    color: #FFF;
+}
+
+div#next_meeting {
+    background-color: #333;
+    border: 2px solid black;
+}
+
+div#content h3 {
+    display: inline;
+}
+
+div#subscribe_info {
+    background-color: #666;
+    border: 2px solid black;
+    text-align: left;
+}
+
+div#footer {
+    font-size: 0.7em;
+}
