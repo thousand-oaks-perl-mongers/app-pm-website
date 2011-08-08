@@ -48,7 +48,7 @@ $vars->{description} = $vars->{meta_description};
 
 $vars->{next_meeting} = {
     details => undef,
-    mailing_list_entry => undef,
+    mailing_list_entry => q{2011-August/000629.html},
     date    => {
         day  => q{Wednesday, August 10, 2011},
         time => q{7:00 PM},
