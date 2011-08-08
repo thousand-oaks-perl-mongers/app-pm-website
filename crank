@@ -98,7 +98,7 @@ $vars->{mailing_list} = {
     post_email => q{thousand-oaks-pm@pm.org},
     subscribe_email => q{thousand-oaks-pm-request@pm.org},
     subscribe_url => q{http://mail.pm.org/mailman/listinfo/thousand-oaks-pm},
-    archives_url => q{http://mail.pm.org/pipermail/thousand-oaks-pm/},
+    archives_url => q{http://mail.pm.org/pipermail/thousand-oaks-pm},
 };
 
 
