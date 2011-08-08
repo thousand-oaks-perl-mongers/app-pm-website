@@ -81,8 +81,8 @@ $vars->{presentations} = [
         title       => q{MongoDB, Perl, and BSON.pm},
         description => undef,
     },
-    {   presenter   => undef,
-        title       => undef,
+    {   presenter   => q{Randal Schwartz},
+        title       => q{A discussion on Perl 6},
         description => undef,
     },
 ];
@@ -92,6 +92,8 @@ module which provides a Pure Perl implementation of MongoDB's BSON
 serialization.
 EOT
 chomp ($vars->{presentations}->[1]->{description} = <<'EOT');
+How can we make Perl 6 more compelling?  Randal has some ideas.  He
+will lead us in a group discussion.
 EOT
 
 $vars->{mailing_list} = {
