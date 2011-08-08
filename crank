@@ -77,8 +77,8 @@ $vars->{next_meeting}->{map_link} =
     q|http://maps.google.com/maps?f=q&source=s_q&hl=en&geocode=&q=30699+Russel+Ranch+Rd.+Westlake+Village,+CA&aq=&sll=37.0625,-95.677068&sspn=44.793449,79.013672&ie=UTF8&hq=&hnear=30699+Russell+Ranch+Rd,+Westlake+Village,+Los+Angeles,+California+91362&ll=34.152248,-118.797859&spn=0.005744,0.009645&t=h&z=17|;
 
 $vars->{presentations} = [
-    {   presenter   => undef,
-        title       => undef,
+    {   presenter   => q{Tommy Stanton},
+        title       => q{Things I Learned at YAPC},
         description => undef,
     },
     {   presenter   => undef,
@@ -87,6 +87,9 @@ $vars->{presentations} = [
     },
 ];
 chomp ($vars->{presentations}->[0]->{description} = <<'EOT');
+In June, Tommy attended YAPC::NA 2011 in Asheville, NC.  He will
+disseminate knowledge acquired from the conference and give an
+overview of the latest and greatest CPAN modules.
 EOT
 chomp ($vars->{presentations}->[1]->{description} = <<'EOT');
 EOT
