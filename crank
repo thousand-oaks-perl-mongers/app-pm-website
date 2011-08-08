@@ -87,7 +87,7 @@ $vars->{presentations} = [
     },
 ];
 chomp ($vars->{presentations}->[0]->{description} = <<'EOT');
-MongoDB is a document-oriented database engine.  BSON.pm is new CPAN
+MongoDB is a document-oriented database engine.  BSON.pm is a new CPAN
 module which provides a Pure Perl implementation of MongoDB's BSON
 serialization.
 EOT
