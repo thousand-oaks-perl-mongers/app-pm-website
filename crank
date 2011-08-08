@@ -48,9 +48,9 @@ $vars->{description} = $vars->{meta_description};
 
 $vars->{next_meeting} = {
     details => undef,
-    mailing_list_entry => q{2011-July/000614.html},
+    mailing_list_entry => undef,
     date    => {
-        day  => q{Wednesday, July 13, 2011},
+        day  => q{Wednesday, August 10, 2011},
         time => q{7:00 PM},
     },
     location => {
@@ -77,12 +77,12 @@ $vars->{next_meeting}->{map_link} =
     q|http://maps.google.com/maps?f=q&source=s_q&hl=en&geocode=&q=30699+Russel+Ranch+Rd.+Westlake+Village,+CA&aq=&sll=37.0625,-95.677068&sspn=44.793449,79.013672&ie=UTF8&hq=&hnear=30699+Russell+Ranch+Rd,+Westlake+Village,+Los+Angeles,+California+91362&ll=34.152248,-118.797859&spn=0.005744,0.009645&t=h&z=17|;
 
 $vars->{presentations} = [
-    {   presenter   => q{Arkadiy Sudarikov},
-        title       => q{Perl debugger},
+    {   presenter   => undef,
+        title       => undef,
         description => undef,
     },
-    {   presenter   => q{Peter Bowen},
-        title       => q{Test-Driven Development},
+    {   presenter   => undef,
+        title       => undef,
         description => undef,
     },
 ];
