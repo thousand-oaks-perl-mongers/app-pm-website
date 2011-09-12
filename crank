@@ -48,9 +48,9 @@ $vars->{description} = $vars->{meta_description};
 
 $vars->{next_meeting} = {
     details => undef,
-    mailing_list_entry => q{2011-August/000629.html},
+    mailing_list_entry => undef,
     date    => {
-        day  => q{Wednesday, August 10, 2011},
+        day  => q{Wednesday, September 14, 2011},
         time => q{7:00 PM},
     },
     location => {
@@ -77,23 +77,22 @@ $vars->{next_meeting}->{map_link} =
     q|http://maps.google.com/maps?f=q&source=s_q&hl=en&geocode=&q=30699+Russel+Ranch+Rd.+Westlake+Village,+CA&aq=&sll=37.0625,-95.677068&sspn=44.793449,79.013672&ie=UTF8&hq=&hnear=30699+Russell+Ranch+Rd,+Westlake+Village,+Los+Angeles,+California+91362&ll=34.152248,-118.797859&spn=0.005744,0.009645&t=h&z=17|;
 
 $vars->{presentations} = [
-    {   presenter   => q{Stefan Geneshky},
-        title       => q{MongoDB, Perl, and BSON.pm},
+    {   presenter   => q{Chuck Hardin},
+        title       => q{Autogenerating subroutines in Perl},
         description => undef,
     },
-    {   presenter   => q{Randal Schwartz},
-        title       => q{A discussion on Perl 6},
+    {   presenter   => undef,
+        title       => undef,
         description => undef,
     },
 ];
 chomp ($vars->{presentations}->[0]->{description} = <<'EOT');
-MongoDB is a document-oriented database engine.  BSON.pm is a new CPAN
-module which provides a Pure Perl implementation of MongoDB's BSON
-serialization.
+Perl gives us the power to write code that generates code, in a manner
+familiar to Lisp programmers and other enlightened folk.  This
+presentation provides a simple guide for how to generate subroutines
+automatically, along with some possible uses for this technique.
 EOT
 chomp ($vars->{presentations}->[1]->{description} = <<'EOT');
-How can we make Perl 6 more compelling?  Randal has some ideas.  He
-will lead us in a group discussion.
 EOT
 
 $vars->{mailing_list} = {
