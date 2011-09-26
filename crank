@@ -48,9 +48,9 @@ $vars->{description} = $vars->{meta_description};
 
 $vars->{next_meeting} = {
     details => undef,
-    mailing_list_entry => q{2011-September/000635.html},
+    mailing_list_entry => undef,
     date    => {
-        day  => q{Wednesday, September 14, 2011},
+        day  => q{Wednesday, October 12, 2011},
         time => q{7:00 PM},
     },
     location => {
@@ -78,7 +78,7 @@ $vars->{next_meeting}->{map_link} =
 
 $vars->{presentations} = [
     {   presenter   => q{Chuck Hardin},
-        title       => q{Autogenerating subroutines in Perl},
+        title       => q{Automated web clients in Perl},
         description => undef,
     },
     {   presenter   => undef,
@@ -87,10 +87,10 @@ $vars->{presentations} = [
     },
 ];
 chomp ($vars->{presentations}->[0]->{description} = <<'EOT');
-Perl gives us the power to write code that generates code, in a manner
-familiar to Lisp programmers and other enlightened folk.  This
-presentation provides a simple guide for how to generate subroutines
-automatically, along with some possible uses for this technique.
+From screen-scraping to test suites, the applications for automated
+web clients are numerous.  Perl provides several options for driving
+web clients.  A basic demonstration of three approaches, with relative
+advantages considered, will be supplied.
 EOT
 chomp ($vars->{presentations}->[1]->{description} = <<'EOT');
 EOT
