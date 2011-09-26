@@ -65,7 +65,7 @@ We meet on the 2nd Wednesday of every month.  Here are the details for
 the next confirmed meeting.
 EOT
 chomp ($vars->{next_meeting}->{location}->{address} = <<'EOT');
-30699 Russel Ranch Rd
+30699 Russell Ranch Rd
 Westlake Village, CA 91362
 EOT
 chomp ($vars->{next_meeting}->{parking}->[0]->{note} = <<'EOT');
@@ -107,7 +107,7 @@ chomp ($vars->{content} = <<'EOT');
 Directions to get to ValueClick:<br /><br />Take the 101 Freeway to the
 Lindero Canyon Road exit and head north.  Pass the Memorial Park on your
 right and turn right at the 2nd light for Russell Ranch Road (you will
-see a Chiptole at that corner).  Pass the Costco to your right, and then
+see a Chipotle at that corner).  Pass the Costco to your right, and then
 take the first right into the parking lot (there is a little yellow
 parcel box that you can use in spotting the driveway that you need to
 turn into).  Turn left toward the glass doors in the far corner.
