@@ -36,7 +36,7 @@ chomp ($vars->{meta_description} = <<'EOT');
 A networking and social group for discussion on Perl, located in
 Thousand Oaks, California
 EOT
-$vars->{meta_author} = 'Tommy Stanton';
+$vars->{meta_author} = 'Peter Bowen';
 chomp ($vars->{header} = <<'EOT');
 ThousandOaks.pm:
 Thousand Oaks Perl Mongers
@@ -46,53 +46,78 @@ $vars->{title} =~ s/\n/ /g;
 
 $vars->{description} = $vars->{meta_description};
 
-$vars->{next_meeting} = {
+$vars->{next_evening_meeting} = {
     details => undef,
     mailing_list_entry => undef,
     date    => {
-        day  => q{Wednesday, October 12, 2011},
-        time => q{7:00 PM},
+            day  => q{Wednesday, September 16, 2015},
+            time => q{6:00 PM},
     },
     location => {
-        name    => q{ValueClick Media},
+        name    => q{Conversant Inc.},
         address => undef,
     },
     parking => undef,
     map_link => undef,
 };
-chomp ($vars->{next_meeting}->{details} = <<'EOT');
-We meet on the 2nd Wednesday of every month.  Here are the details for
-the next confirmed meeting.
+
+chomp ($vars->{next_evening_meeting}->{details} = <<'EOT');
+<p>We will have a fun evening of Perl and comraderie.  Everyone is Welcome.
+There is food, so please RSVP @
+<a href="http://www.meetup.com/thousand-oaks-pm/">Meetup</a> so that we
+can be sure to buy enough.</p>
+
+Schedule:
+<ul>
+<li>6:00pm Chill out, eat, network, Monger business and the state of Perl
+<li>6:30pm First Presentation
+<li>7:15pm Break
+<li>7:30pm Second Presentation
+<li>8:15pm Head Home
+</ul>
+
+<p>Food provided by Conversant</p>
+
 EOT
-chomp ($vars->{next_meeting}->{location}->{address} = <<'EOT');
+
+chomp ($vars->{next_evening_meeting}->{location}->{address} = <<'EOT');
 30699 Russell Ranch Rd
 Westlake Village, CA 91362
 EOT
-chomp ($vars->{next_meeting}->{parking}->[0]->{note} = <<'EOT');
-There is a giant parking lot right in front of the building with plenty
-of free parking. :)
+
+chomp ($vars->{next_evening_meeting}->{parking}->[0]->{note} = <<'EOT');
+There is a giant parking lot right in back of the building with plenty
+of free parking. :)  When you get there, enter through the South Entrance.
+There should be a sign with a phone number, but if there isn't, call me at
+eight-oh-five two-one-six nine-seven-four-three.
 EOT
 
-$vars->{next_meeting}->{map_link} =
+$vars->{next_evening_meeting}->{map_link} =
     q|http://maps.google.com/maps?f=q&source=s_q&hl=en&geocode=&q=30699+Russel+Ranch+Rd.+Westlake+Village,+CA&aq=&sll=37.0625,-95.677068&sspn=44.793449,79.013672&ie=UTF8&hq=&hnear=30699+Russell+Ranch+Rd,+Westlake+Village,+Los+Angeles,+California+91362&ll=34.152248,-118.797859&spn=0.005744,0.009645&t=h&z=17|;
 
-$vars->{presentations} = [
-    {   presenter   => q{Chuck Hardin},
-        title       => q{Automated web clients in Perl},
+$vars->{evening_presentations} = [
+    {   presenter   => q{Peter Bowen},
+        title       => q{Monte Carlo Simulation in Perl},
         description => undef,
     },
-    {   presenter   => undef,
-        title       => undef,
+    {   presenter   => q{TBD},
+        title       => q{Open},
         description => undef,
     },
 ];
-chomp ($vars->{presentations}->[0]->{description} = <<'EOT');
-From screen-scraping to test suites, the applications for automated
-web clients are numerous.  Perl provides several options for driving
-web clients.  A basic demonstration of three approaches, with relative
-advantages considered, will be supplied.
+
+chomp ($vars->{evening_presentations}->[0]->{description} = <<'EOT');
+<p>Spreadsheets are very good for building models of all sorts.  However,
+many people forget that a model is just a collection of relationships and
+until you do a little testing, you don't really understand them.</p>
+<p> We'll build a quick model business and do some analysis in excel,
+then we'll transfer that into perl and really put it through it's paces.</p>
 EOT
-chomp ($vars->{presentations}->[1]->{description} = <<'EOT');
+
+chomp ($vars->{evening_presentations}->[1]->{description} = <<'EOT');
+<p>The second hour is currently open.  I will have a couple of things
+prepared, or we can have lightning talks.  Unless you want to present,
+then let me know and I'll put your name here.<p>
 EOT
 
 $vars->{mailing_list} = {
@@ -102,16 +127,17 @@ $vars->{mailing_list} = {
     archives_url => q{http://mail.pm.org/pipermail/thousand-oaks-pm},
 };
 
-
 chomp ($vars->{content} = <<'EOT');
-Directions to get to ValueClick:<br /><br />Take the 101 Freeway to the
+Directions to get to Conversant:<br /><br />Take the 101 Freeway to the
 Lindero Canyon Road exit and head north.  Pass the Memorial Park on your
 right and turn right at the 2nd light for Russell Ranch Road (you will
 see a Chipotle at that corner).  Pass the Costco to your right, and then
 take the first right into the parking lot (there is a little yellow
 parcel box that you can use in spotting the driveway that you need to
-turn into).  Turn left toward the glass doors in the far corner.
-Someone will be waiting to let you in downstairs, at the glass doors.
+turn into).  Turn left toward the glass doors in the far corner. Park
+near those doors.  If the doors are locked, there will be a sign on the
+door with a number to call and we'll send someone to let you in.
+
 EOT
 
 $tt->process( 'page.tt', $vars, 'index.html' ) || die $tt->error;

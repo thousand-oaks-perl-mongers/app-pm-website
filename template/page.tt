@@ -22,45 +22,45 @@
                 </p>
             </div>
             <div id="next_meeting" class="main">
-                <h2>Next Meeting</h2><br />
-                [% IF next_meeting.details %]
-                [% next_meeting.details %]
+                <h2>Next Evening Meeting</h2><br />
+                [% IF next_evening_meeting.details %]
+                [% next_evening_meeting.details %]
                 <br />
                 [% END %]
                 <br />
                 <div id="next_meeting_info">
                     <h3>Date:</h3><br />
-                    [% IF next_meeting.mailing_list_entry %]
+                    [% IF next_evening_meeting.mailing_list_entry %]
                         <a href="[% mailing_list.archives_url %]/[% next_meeting.mailing_list_entry %]">
                     [% END %]
-                    [% IF next_meeting.date.day %]
-                    [% next_meeting.date.day %]<br />
+                    [% IF next_evening_meeting.date.day %]
+                    [% next_evening_meeting.date.day %]<br />
                     [% ELSE %]
                     To be determined<br />
                     [% END %]
-                    [% IF next_meeting.date.time %]
-                    [% next_meeting.date.time %]<br />
+                    [% IF next_evening_meeting.date.time %]
+                    [% next_evening_meeting.date.time %]<br />
                     [% END %]
-                    [% IF next_meeting.mailing_list_entry %]
+                    [% IF next_evening_meeting.mailing_list_entry %]
                         </a>
                     [% END %]
                     <br />
                     <h3>Location:</h3><br />
-                    [% IF next_meeting.location.name %]
-                    [% next_meeting.location.name %]
+                    [% IF next_evening_meeting.location.name %]
+                    [% next_evening_meeting.location.name %]
                     [% ELSE %]
                     To be determined
                     [% END %]
                     <br />
-                    [% IF next_meeting.location.address %]
+                    [% IF next_evening_meeting.location.address %]
                     [% FILTER html_line_break %]
                     [% next_meeting.location.address %]
                     [% END %]<br />
                     [% END %]
                     <br />
-                    [% IF next_meeting.parking %]
+                    [% IF next_evening_meeting.parking %]
                         <h3>Parking:</h3>
-                        [% FOREACH parking_location IN next_meeting.parking %]
+                        [% FOREACH parking_location IN next_evening_meeting.parking %]
                             [% IF parking_location.name %]
                                 <br />
                                 [% FILTER html_line_break %]
@@ -82,15 +82,15 @@
                             [% UNLESS loop.last %] <br /><br /> [% END %]
                         [% END %]
                     [% END %]
-                    [% IF next_meeting.map_link %]
+                    [% IF next_evening_meeting.map_link %]
                     <br /><br />
                     Google map of the location is available
-                    <a href="[% next_meeting.map_link | html_entity %]">here</a>.
+                    <a href="[% next_evening_meeting.map_link | html_entity %]">here</a>.
                     [% END %]
                 </div>
                 <div id="next_meeting_details">
                     <h3>Presentation(s):</h3><br />
-                    [% FOREACH presentation IN presentations %]
+                    [% FOREACH presentation IN evening_presentations %]
                         [% IF presentation.presenter %]
                             <b>[% presentation.presenter %] -
                             <br />&nbsp;&nbsp;
