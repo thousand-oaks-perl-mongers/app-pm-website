@@ -50,7 +50,7 @@ $vars->{next_evening_meeting} = {
     details => undef,
     mailing_list_entry => undef,
     date    => {
-            day  => q{Wednesday, September 16, 2015},
+            day  => q{Wednesday, October 21, 2015},
             time => q{6:00 PM},
     },
     location => {
@@ -97,27 +97,24 @@ $vars->{next_evening_meeting}->{map_link} =
 
 $vars->{evening_presentations} = [
     {   presenter   => q{Peter Bowen},
-        title       => q{Monte Carlo Simulation in Perl},
+        title       => q{Monte Carlo Simulation in Perl - Part 2},
         description => undef,
     },
-    {   presenter   => q{TBD},
-        title       => q{Open},
+    {   presenter   => q{Lightning Talks},
+        title       => q{Open Forum},
         description => undef,
     },
 ];
 
 chomp ($vars->{evening_presentations}->[0]->{description} = <<'EOT');
-<p>Spreadsheets are very good for building models of all sorts.  However,
-many people forget that a model is just a collection of relationships and
-until you do a little testing, you don't really understand them.</p>
-<p> We'll build a quick model business and do some analysis in excel,
-then we'll transfer that into perl and really put it through it's paces.</p>
+<p>Last month we looked at a simple business modeled in excel and talked about an
+architectural design to represent the model for simulation. This month, we'll look
+at the code that I'm actively writing and see if it works!</p>
 EOT
 
 chomp ($vars->{evening_presentations}->[1]->{description} = <<'EOT');
-<p>The second hour is currently open.  I will have a couple of things
-prepared, or we can have lightning talks.  Unless you want to present,
-then let me know and I'll put your name here.<p>
+<p>Five to ten minute talks about something that amuses you.  Have an iteresting bug?
+Find a cool CPAN module?  Annoyed by something in Perl?  Let's talk about it.<p>
 EOT
 
 $vars->{mailing_list} = {
