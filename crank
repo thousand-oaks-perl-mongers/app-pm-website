@@ -97,7 +97,7 @@ $vars->{next_evening_meeting}->{map_link} =
 
 $vars->{evening_presentations} = [
     {   presenter   => q{Peter Bowen},
-        title       => q{Monte Carlo Simulation in Perl - Part 2},
+        title       => q{Perl Hashes, Bloom Filters, and You},
         description => undef,
     },
     {   presenter   => q{Lightning Talks},
@@ -107,9 +107,7 @@ $vars->{evening_presentations} = [
 ];
 
 chomp ($vars->{evening_presentations}->[0]->{description} = <<'EOT');
-<p>Last month we looked at a simple business modeled in excel and talked about an
-architectural design to represent the model for simulation. This month, we'll look
-at the code that I'm actively writing and see if it works!</p>
+<p>Let's talk about how hashes work and then talk about bloom filters.</p>
 EOT
 
 chomp ($vars->{evening_presentations}->[1]->{description} = <<'EOT');
