@@ -107,7 +107,7 @@ $vars->{evening_presentations} = [
 ];
 
 chomp ($vars->{evening_presentations}->[0]->{description} = <<'EOT');
-<p>Barry has several things he wants to talk about, but he's promised me that he's going to choose one.  He always has intersting isnights into what works and doesn't work in perl.  It should be an interesting evening.</p>
+<p>Barry has several things he wants to talk about, but he's promised me that he's going to choose one.  He always has intersting insights into what works and doesn't work in perl.  It should be an interesting evening.</p>
 EOT
 
 chomp ($vars->{evening_presentations}->[1]->{description} = <<'EOT');
