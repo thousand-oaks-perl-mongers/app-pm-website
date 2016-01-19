@@ -50,7 +50,7 @@ $vars->{next_evening_meeting} = {
     details => undef,
     mailing_list_entry => undef,
     date    => {
-            day  => q{Wednesday, November 18, 2015},
+            day  => q{Wednesday, January 20, 2016},
             time => q{6:00 PM},
     },
     location => {
@@ -96,8 +96,8 @@ $vars->{next_evening_meeting}->{map_link} =
     q|http://maps.google.com/maps?f=q&source=s_q&hl=en&geocode=&q=30699+Russel+Ranch+Rd.+Westlake+Village,+CA&aq=&sll=37.0625,-95.677068&sspn=44.793449,79.013672&ie=UTF8&hq=&hnear=30699+Russell+Ranch+Rd,+Westlake+Village,+Los+Angeles,+California+91362&ll=34.152248,-118.797859&spn=0.005744,0.009645&t=h&z=17|;
 
 $vars->{evening_presentations} = [
-    {   presenter   => q{Jed Cunningham},
-        title       => q{Hands on Docker},
+    {   presenter   => q{Barry Brevik},
+        title       => q{TBA},
         description => undef,
     },
     {   presenter   => q{Lightning Talks},
@@ -107,7 +107,7 @@ $vars->{evening_presentations} = [
 ];
 
 chomp ($vars->{evening_presentations}->[0]->{description} = <<'EOT');
-<p>What is Docker and what can it do for you?  Jed will walk us through Docker and how to use it to make development and deployment easier.</p>
+<p>Barry has several things he wants to talk about, but he's promised me that he's going to choose one.  He always has intersting isnights into what works and doesn't work in perl.  It should be an interesting evening.</p>
 EOT
 
 chomp ($vars->{evening_presentations}->[1]->{description} = <<'EOT');
