@@ -50,7 +50,7 @@ $vars->{next_evening_meeting} = {
     details => undef,
     mailing_list_entry => undef,
     date    => {
-            day  => q{Wednesday, February 17, 2016},
+            day  => q{Wednesday June 15, 2016},
             time => q{6:00 PM},
     },
     location => {
@@ -63,21 +63,18 @@ $vars->{next_evening_meeting} = {
 
 chomp ($vars->{next_evening_meeting}->{details} = <<'EOT');
 <p>We will have a fun evening of Perl and comraderie.  Everyone is Welcome.
-There is food, so please RSVP @
+Please RSVP @
 <a href="http://www.meetup.com/thousand-oaks-pm/">Meetup</a> so that we
-can be sure to buy enough.</p>
+can plan for you!</p>
 
 Schedule:
 <ul>
-<li>6:00pm Chill out, eat, network, Monger business and the state of Perl
-<li>6:30pm First Presentation
+<li>6:00pm Chill out, network, Monger business and the state of Perl
+<li>6:30pm Keynote - Feature Presentation
 <li>7:15pm Break
-<li>7:30pm Second Presentation
+<li>7:30pm Lightning Talks
 <li>8:15pm Head Home
 </ul>
-
-<p>Food provided by Conversant</p>
-
 EOT
 
 chomp ($vars->{next_evening_meeting}->{location}->{address} = <<'EOT');
@@ -87,33 +84,25 @@ EOT
 
 chomp ($vars->{next_evening_meeting}->{parking}->[0]->{note} = <<'EOT');
 There is a giant parking lot right in back of the building with plenty
-of free parking. :)  When you get there, enter through the South Entrance.
-There should be a sign with a phone number, but if there isn't, call me at
-eight-oh-five two-one-six nine-seven-four-three.
+of free parking. :)  When you get there, enter through the East Entrance and
+go upstairs. There should be a sign with a phone number, but if there isn't, call me at eight-oh-five two-one-six nine-seven-four-three.
 EOT
 
 $vars->{next_evening_meeting}->{map_link} =
     q|http://maps.google.com/maps?f=q&source=s_q&hl=en&geocode=&q=30699+Russel+Ranch+Rd.+Westlake+Village,+CA&aq=&sll=37.0625,-95.677068&sspn=44.793449,79.013672&ie=UTF8&hq=&hnear=30699+Russell+Ranch+Rd,+Westlake+Village,+Los+Angeles,+California+91362&ll=34.152248,-118.797859&spn=0.005744,0.009645&t=h&z=17|;
 
 $vars->{evening_presentations} = [
-    {   presenter   => q{Peter Bowen},
-        title       => q{Raw Data, Binary, and Perl},
-        description => undef,
-    },
-    {   presenter   => q{Lightning Talks},
-        title       => q{Open Forum},
+    {   presenter   => q{Jed Cunningham},
+        title       => q{},
         description => undef,
     },
 ];
 
-chomp ($vars->{evening_presentations}->[0]->{description} = <<'EOT');
-<p>We'll be talking about raw data in Perl.  We'll cover pack as well as the binary operators. </p>
-EOT
+#chomp ($vars->{evening_presentations}->[0]->{description} = <<'EOT');
+#EOT
 
-chomp ($vars->{evening_presentations}->[1]->{description} = <<'EOT');
-<p>Five to ten minute talks about something that amuses you.  Have an iteresting bug?
-Find a cool CPAN module?  Annoyed by something in Perl?  Let's talk about it.<p>
-EOT
+#chomp ($vars->{evening_presentations}->[1]->{description} = <<'EOT');
+#EOT
 
 $vars->{mailing_list} = {
     post_email => q{thousand-oaks-pm@pm.org},

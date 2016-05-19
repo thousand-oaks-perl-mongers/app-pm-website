@@ -89,16 +89,20 @@
                     [% END %]
                 </div>
                 <div id="next_meeting_details">
+                  
                     <h3>Presentation(s):</h3><br />
+                    Check our Github page for upcoming presentations as well as previous presentations and agendas.<br />
+                    <a href="http://thousand-oaks-perl-mongers.github.io/">http://thousand-oaks-perl-mongers.github.io/</a><br />
+                    <br /><br />
+
+                    <h3>This Month:</h3><br />
                     [% FOREACH presentation IN evening_presentations %]
                         [% IF presentation.presenter %]
-                            <b>[% presentation.presenter %] -
+                            <b>[% presentation.presenter %]
                             <br />&nbsp;&nbsp;
                             [% IF presentation.title %]
-                                "[% presentation.title %]"
-                            [% ELSE %]
-                                To be announced
-                            [% END %]</b>
+                                - "[% presentation.title %]"
+                            [% END %]</b>                            
                             [% IF presentation.description %]
                                 <br /><br />
                                 [% presentation.description %]
@@ -109,6 +113,7 @@
                         [% END %]
                         [% UNLESS loop.last %] <br /><br /> [% END %]
                     [% END %]
+                            
                 </div>
             </div>
             <div id="content" class="main">
