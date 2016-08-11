@@ -33,8 +33,8 @@ my $vars = {};
 $vars->{IMAGE_DIR} = 'img';
 
 chomp ($vars->{meta_description} = <<'EOT');
-A networking and social group for discussion on Perl, located in
-Thousand Oaks, California. We meet on the third Tuesday of each week.
+A networking and social group for discussion on Perl, located in Thousand Oaks, California. <br>
+We meet on the third Tuesday of each month.
 EOT
 $vars->{meta_author} = 'Peter Bowen';
 chomp ($vars->{header} = <<'EOT');
