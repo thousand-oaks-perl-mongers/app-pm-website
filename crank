@@ -50,12 +50,12 @@ $vars->{next_evening_meeting} = {
     details => undef,
     mailing_list_entry => undef,
     date    => {
-            day  => q{Tuesday August 16, 2016},
-            time => q{6:00 PM},
+            day  => q{Thursday December 22, 2016},
+            time => q{7:30 PM},
     },
     location => {
-        name    => q{Conversant Inc.},
-        address => undef,
+        name    => q{Cisco's Mexican Resturant - Westlake Village},
+        address => q{925 Westlake Blvd., Westlake Village, CA 91361},
     },
     parking => undef,
     map_link => undef,
@@ -69,32 +69,27 @@ can plan for you!</p>
 
 Schedule:
 <ul>
-<li>6:00pm Chill out, network, Monger business and the state of Perl
-<li>6:30pm Main Presentation
-<li>7:15pm Break
-<li>7:30pm Lightning Talks
-<li>8:15pm Head Home
+<li>7:30pm Dinner and Chit Chat</li>
 </ul>
 EOT
 
 chomp ($vars->{next_evening_meeting}->{location}->{address} = <<'EOT');
-30699 Russell Ranch Rd
-Westlake Village, CA 91362
+925 Westlake Blvd., Westlake Village, CA 91361
 EOT
 
-chomp ($vars->{next_evening_meeting}->{parking}->[0]->{note} = <<'EOT');
-There is a giant parking lot right in back of the building with plenty
-of free parking. :)  When you get there, enter through the East Entrance and
-go upstairs. There should be a sign with a phone number, but if there isn't, call me at eight-oh-five two-one-six nine-seven-four-three.
-EOT
+#chomp ($vars->{next_evening_meeting}->{parking}->[0]->{note} = <<'EOT');
+#There is a giant parking lot right in back of the building with plenty
+#of free parking. :)  When you get there, enter through the East Entrance and
+#go upstairs. There should be a sign with a phone number, but if there isn't, call me at eight-oh-five two-one-six nine-seven-four-three.
+#EOT
 
 $vars->{next_evening_meeting}->{map_link} =
-    q|http://maps.google.com/maps?f=q&source=s_q&hl=en&geocode=&q=30699+Russel+Ranch+Rd.+Westlake+Village,+CA&aq=&sll=37.0625,-95.677068&sspn=44.793449,79.013672&ie=UTF8&hq=&hnear=30699+Russell+Ranch+Rd,+Westlake+Village,+Los+Angeles,+California+91362&ll=34.152248,-118.797859&spn=0.005744,0.009645&t=h&z=17|;
+    q|https://maps.google.com/maps?f=q&hl=en&q=925+Westlake+Blvd.%2C+Westlake+Village%2C+CA%2C+us|;
 
 $vars->{evening_presentations} = [
-    {   presenter   => q{Peter Bowen},
-        title       => q{(TDP) Test Driven Presentation},
-        description => q{Test Driven Development is a process that encourages tests before writing code.  Really, it is a framework that builds discipline, improves confidence, and enables refactoring.  We'll take it for a spin and group program the solution to a simple problem.  Bring your laptop and your sense of humor.} ,
+    {   presenter   => q{TO.PM},
+        title       => q{Group Dinner},
+        description => q{We will be getting together for a group dinner at Cisco's.  Significant others are encouraged to come as well!} ,
     },
 ];
 
@@ -111,17 +106,17 @@ $vars->{mailing_list} = {
     archives_url => q{http://mail.pm.org/pipermail/thousand-oaks-pm},
 };
 
-chomp ($vars->{content} = <<'EOT');
-Directions to get to Conversant:<br /><br />Take the 101 Freeway to the
-Lindero Canyon Road exit and head north.  Pass the Memorial Park on your
-right and turn right at the 2nd light for Russell Ranch Road (you will
-see a Chipotle at that corner).  Pass the Costco to your right, and then
-take the first right into the parking lot (there is a little yellow
-parcel box that you can use in spotting the driveway that you need to
-turn into).  Turn left toward the glass doors in the far corner. Park
-near those doors.  If the doors are locked, there will be a sign on the
-door with a number to call and we'll send someone to let you in.
-
-EOT
+#chomp ($vars->{content} = <<'EOT');
+#Directions to get to Conversant:<br /><br />Take the 101 Freeway to the
+#Lindero Canyon Road exit and head north.  Pass the Memorial Park on your
+#right and turn right at the 2nd light for Russell Ranch Road (you will
+#see a Chipotle at that corner).  Pass the Costco to your right, and then
+#take the first right into the parking lot (there is a little yellow
+#parcel box that you can use in spotting the driveway that you need to
+#turn into).  Turn left toward the glass doors in the far corner. Park
+#near those doors.  If the doors are locked, there will be a sign on the
+#door with a number to call and we'll send someone to let you in.
+#
+#EOT
 
 $tt->process( 'page.tt', $vars, 'index.html' ) || die $tt->error;
